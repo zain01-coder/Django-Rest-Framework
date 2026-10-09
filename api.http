@@ -1,0 +1,46 @@
+GET http://127.0.0.1:8000/api/products/ HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/api/products/2 HTTP/1.1
+
+###
+DELETE http://127.0.0.1:8000/api/products/2 HTTP/1.1
+
+###
+PUT http://127.0.0.1:8000/api/products/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1MTcxMzMzLCJpYXQiOjE3NjUxNzEwMzMsImp0aSI6ImVkNDdmM2FkMTBkOTRiOTdhMDExZTlmM2QyYjdlZWNkIiwidXNlcl9pZCI6IjEifQ.rDa7tXzVEPV4g5te_-iSgSDVOZ8s4mDa6foyZHifs0o
+
+{
+    "name":"Television",
+    "price":300.00,
+    "stock":15,
+    "description":"An amazing new TV"
+}
+
+###
+POST http://127.0.0.1:8000/api/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0NDEyMjA4LCJpYXQiOjE3NjQ0MTE5MDgsImp0aSI6ImI4NGFlMjA5M2RhYzRkNmE5OWUwMjkxZjlmMDhmYzZhIiwidXNlcl9pZCI6IjEifQ.4BB98BXXayDJK_rIme7qrlrtzUoHldK6tOt6w7ZiO9M
+
+{
+    "name":"Television",
+    "price":300.00,
+    "stock":15,
+    "description":"An amazing new TV"
+}
+
+
+###
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "john-doe",
+    "password" : "test"
+}
+
+###
+GET http://127.0.0.1:8000/api/orders/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4NDg2NzI4LCJpYXQiOjE3Njg0ODY0MjgsImp0aSI6ImMzNTE4MzIxNDIxZDQxZWE4NmYyNmMxN2Q1YWZhNjk3IiwidXNlcl9pZCI6IjMifQ.YBP-DrT6XyWqnhvIdpvsDsn2zWMPMAlkXnk-byyDCXc
+
